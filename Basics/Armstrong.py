@@ -7,10 +7,10 @@ def cube(n):
         sum += digit * digit * digit
         temp = (int)(temp / 10)
 
-    if (int)(n) == (int)(sum):
-        return True
-    else:
-        return False
+        if (int)(n) == (int)(sum):
+            return True
+        else:
+            return False
 
 
 testcases = input("Enter number of testcases :")
@@ -21,4 +21,4 @@ while t > 0:
         print(number, "is an Armstrong Number.")
     else:
         print(number, "is not an Armstrong number")
-    t = t - 1
+    t -= 1
