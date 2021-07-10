@@ -16,4 +16,5 @@ total_bill = initial_bill*(100+percentage)/100
 number_of_people = int(input("How many people to split the bill? "))
 
 share = round(total_bill/number_of_people,2)
+share = "{:.2f}".format(share)
 print(f"Each person should pay: ${share}")
