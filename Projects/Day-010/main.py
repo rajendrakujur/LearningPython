@@ -1,6 +1,14 @@
 #Calculator
 
 from art import logo
+from os import system, name
+
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _ = system("clear")
+
 def add(n1,n2):
 	return n1+n2
 
@@ -34,6 +42,8 @@ def Calculator():
 			num1 = answer
 		else:
 			should_continue = False
+			clear()
+			print(logo)
 			Calculator()
 
 print(logo)
