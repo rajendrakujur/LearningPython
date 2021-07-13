@@ -19,7 +19,10 @@ def play():
     gameover = False
     winner = random_1
     while not gameover:
+        
         random_2 = random.randint(0, len(data))
+        while random_2 == random_1:
+            random_2 = random.randint(0, len(data))
 
         choice = input((f"Who has more follower A: {data[random_1]['name']} or B: {data[random_2]['name']}\n")        )
         print(f"A:{data[random_1]['name']} has {data[random_1]['follower_count']} follower")
