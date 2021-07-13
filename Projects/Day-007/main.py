@@ -2,8 +2,14 @@
 
 import random
 from hangman_words import word_list
-from replit import clear
 from hangman_art import stages,logo
+from os import system, name
+
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _ = system("clear")
 
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
