@@ -23,7 +23,7 @@ def clear():
 def play():
 	print(logo)
 	print("I am picking a number between 1 to 100")
-	generated_number = random.randint(0,100)
+	generated_number = random.randint(1,100)
 	level = input("Enter the difficulty level to play: hard or medium or easy\n")
 	if level.lower() == "hard":
 		remaining_attempts = 5
