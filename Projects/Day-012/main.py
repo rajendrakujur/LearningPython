@@ -6,11 +6,19 @@
 # If they got the answer correct, show the actual answer to the player.
 # Track the number of turns remaining.
 # If they run out of turns, provide feedback to the player. 
-# Include two different difficulty levels (e.g., 10 guesses in easy mode, only 5 guesses in hard mode).
+# Include three different difficulty levels (e.g., 10 guesses in easy mode,7 guesses in medium mode, only 5 guesses in hard mode).
 
 from art import logo
-from replit import clear
 import random
+from os import system, name
+
+
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _ = system("clear")
+	
 
 def play():
 	print(logo)
