@@ -1,5 +1,12 @@
-from replit import clear
+
 from art import logo
+from os import system, name
+
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _ = system("clear")
 
 should_continue = True
 dictionary = {}
